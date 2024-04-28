@@ -640,6 +640,13 @@ _DEPRECATED_POWER_VOLT_AMPERE: Final = DeprecatedConstantEnum(
 """Deprecated: please use UnitOfApparentPower.VOLT_AMPERE."""
 
 
+# Rate units
+class UnitOfRate(StrEnum):
+    """Rate units."""
+
+    GRAM_PER_HOUR = "g/h"
+
+
 # Power units
 class UnitOfPower(StrEnum):
     """Power units."""
@@ -1222,6 +1229,8 @@ _DEPRECATED_PRECIPITATION_INCHES_PER_HOUR: Final = DeprecatedConstantEnum(
 # Concentration units
 CONCENTRATION_MICROGRAMS_PER_CUBIC_METER: Final = "µg/m³"
 CONCENTRATION_MILLIGRAMS_PER_CUBIC_METER: Final = "mg/m³"
+CONCENTRATION_KILOGRAMS_PER_CUBIC_METER: Final = "kg/m³"
+CONCENTRATION_MILLIGRAMS_PER_LITER: Final = "mg/l"
 CONCENTRATION_MICROGRAMS_PER_CUBIC_FOOT: Final = "μg/ft³"
 CONCENTRATION_PARTS_PER_CUBIC_METER: Final = "p/m³"
 CONCENTRATION_PARTS_PER_MILLION: Final = "ppm"

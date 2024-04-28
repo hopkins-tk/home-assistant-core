@@ -43,6 +43,9 @@
       "redox": {
         "name": "Redox"
       },
+      "salinity": {
+        "name": "Salinity"
+      },
       "water_level": {
         "name": "Water level"
       },

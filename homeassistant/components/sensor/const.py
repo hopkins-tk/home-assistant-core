@@ -354,10 +354,10 @@ class SensorDeviceClass(StrEnum):
     Unit of measurement: `µg/m³`
     """
 
-    CHLORINE = "chlorine"
-    """Amount of Cl.
+    GAS_PRODUCTION = "gas_production"
+    """Amount of gass produced.
 
-    Unit of measurement: `mg/l`
+    Unit of measurement: `g/h`
     """
 
     TEMPERATURE = "temperature"
