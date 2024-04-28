@@ -34,8 +34,6 @@ class AsekoSensorEntityDescription(SensorEntityDescription):
     """Describes an Aseko binary sensor entity."""
 
 
-TEMPRATURE_VARIABLE_SUFFIX = "Temp"
-
 UNIT_SENSORS = {
     "airTemp": AsekoSensorEntityDescription(
         key="air_temperature",
@@ -61,12 +59,12 @@ UNIT_SENSORS = {
         native_unit_of_measurement=UnitOfElectricPotential.MILLIVOLT,
         icon="mdi:test-tube",
     ),
-    "electrolyzer": AsekoSensorEntityDescription(
+    "electrodePower": AsekoSensorEntityDescription(
         key="electrolyzer",
         translation_key="electrolyzer",
         device_class=SensorDeviceClass.GAS_PRODUCTION,
         native_unit_of_measurement=UnitOfRate.GRAM_PER_HOUR,
-        icon="mdi:test-tube",
+        icon="mdi:lightning-bolt",
     ),
     "clf": AsekoSensorEntityDescription(
         key="free_chlorine",
@@ -121,8 +119,6 @@ class VariableSensorEntity(AsekoEntity, SensorEntity):
         entity_description = UNIT_SENSORS.get(self._variable.type)
         if entity_description is not None:
             self.entity_description = entity_description
-            if TEMPRATURE_VARIABLE_SUFFIX in self._variable.type:
-                self._attr_native_unit_of_measurement = self._variable.unit
         else:
             self._attr_name = self._variable.name
             self._attr_native_unit_of_measurement = self._variable.unit
