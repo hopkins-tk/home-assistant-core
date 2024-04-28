@@ -17,6 +17,7 @@ from homeassistant.const import (
     UnitOfInformation,
     UnitOfLength,
     UnitOfMass,
+    UnitOfMassFlowRate,
     UnitOfPower,
     UnitOfPressure,
     UnitOfSpeed,
@@ -609,6 +610,26 @@ class VolumeFlowRateConverter(BaseUnitConverter):
         UnitOfVolumeFlowRate.CUBIC_METERS_PER_HOUR,
         UnitOfVolumeFlowRate.LITERS_PER_MINUTE,
         UnitOfVolumeFlowRate.GALLONS_PER_MINUTE,
+    }
+
+
+class MassFlowRateConverter(BaseUnitConverter):
+    """Utility to convert mass flow rate values."""
+
+    UNIT_CLASS = "mass_flow_rate"
+    NORMALIZED_UNIT = UnitOfMassFlowRate.GRAM_PER_HOUR
+    # Units in terms of kg/h
+    _UNIT_CONVERSION: dict[str | None, float] = {
+        UnitOfMassFlowRate.GRAM_PER_HOUR: 1,
+        UnitOfMassFlowRate.KILOGRAM_PER_HOUR: 1 / 1000,
+        UnitOfMassFlowRate.OUNCES_PER_HOUR: 1 / _OUNCE_TO_G,
+        UnitOfMassFlowRate.POUNDS_PER_HOUR: 1 / _POUND_TO_G,
+    }
+    VALID_UNITS = {
+        UnitOfMassFlowRate.GRAM_PER_HOUR,
+        UnitOfMassFlowRate.KILOGRAM_PER_HOUR,
+        UnitOfMassFlowRate.OUNCES_PER_HOUR,
+        UnitOfMassFlowRate.POUNDS_PER_HOUR,
     }
 
 

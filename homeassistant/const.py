@@ -640,13 +640,6 @@ _DEPRECATED_POWER_VOLT_AMPERE: Final = DeprecatedConstantEnum(
 """Deprecated: please use UnitOfApparentPower.VOLT_AMPERE."""
 
 
-# Rate units
-class UnitOfRate(StrEnum):
-    """Rate units."""
-
-    GRAM_PER_HOUR = "g/h"
-
-
 # Power units
 class UnitOfPower(StrEnum):
     """Power units."""
@@ -1060,6 +1053,16 @@ _DEPRECATED_VOLUME_FLUID_OUNCE: Final = DeprecatedConstantEnum(
     "2025.1",
 )
 """Deprecated: please use UnitOfVolume.FLUID_OUNCES"""
+
+
+# Mass Flow Rate units
+class UnitOfMassFlowRate(StrEnum):
+    """Volume flow rate units."""
+
+    GRAM_PER_HOUR = "g/h"
+    KILOGRAM_PER_HOUR = "kg/h"
+    OUNCES_PER_HOUR = "oz/h"
+    POUNDS_PER_HOUR = "lb/h"
 
 
 # Volume Flow Rate units

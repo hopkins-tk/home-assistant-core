@@ -18,7 +18,7 @@ from homeassistant.const import (
     CONCENTRATION_MILLIGRAMS_PER_LITER,
     UnitOfElectricPotential,
     UnitOfLength,
-    UnitOfRate,
+    UnitOfMassFlowRate,
     UnitOfTemperature,
 )
 from homeassistant.core import HomeAssistant
@@ -62,8 +62,8 @@ UNIT_SENSORS = {
     "electrodePower": AsekoSensorEntityDescription(
         key="electrolyzer",
         translation_key="electrolyzer",
-        device_class=SensorDeviceClass.GAS_PRODUCTION,
-        native_unit_of_measurement=UnitOfRate.GRAM_PER_HOUR,
+        device_class=SensorDeviceClass.MASS_FLOW_RATE,
+        native_unit_of_measurement=UnitOfMassFlowRate.GRAM_PER_HOUR,
         icon="mdi:lightning-bolt",
     ),
     "clf": AsekoSensorEntityDescription(
