@@ -1059,8 +1059,8 @@ _DEPRECATED_VOLUME_FLUID_OUNCE: Final = DeprecatedConstantEnum(
 class UnitOfMassFlowRate(StrEnum):
     """Volume flow rate units."""
 
-    GRAM_PER_HOUR = "g/h"
-    KILOGRAM_PER_HOUR = "kg/h"
+    GRAMS_PER_HOUR = "g/h"
+    KILOGRAMS_PER_HOUR = "kg/h"
     OUNCES_PER_HOUR = "oz/h"
     POUNDS_PER_HOUR = "lb/h"
 

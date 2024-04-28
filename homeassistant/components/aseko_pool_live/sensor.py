@@ -63,7 +63,7 @@ UNIT_SENSORS = {
         key="electrolyzer",
         translation_key="electrolyzer",
         device_class=SensorDeviceClass.MASS_FLOW_RATE,
-        native_unit_of_measurement=UnitOfMassFlowRate.GRAM_PER_HOUR,
+        native_unit_of_measurement=UnitOfMassFlowRate.GRAMS_PER_HOUR,
         icon="mdi:lightning-bolt",
     ),
     "clf": AsekoSensorEntityDescription(
