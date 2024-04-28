@@ -354,6 +354,12 @@ class SensorDeviceClass(StrEnum):
     Unit of measurement: `µg/m³`
     """
 
+    CHLORINE = "chlorine"
+    """Amount of Cl.
+
+    Unit of measurement: `mg/l`
+    """
+
     TEMPERATURE = "temperature"
     """Temperature.
 
